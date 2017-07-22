@@ -1,6 +1,6 @@
-# PushVendor
+# PushVendor Prototype
 
-PushVendor is an open source point of sale system built with Ruby on Rails and Twitter Bootstrap. This was originally a prototype for a commercial offering that never materialized. I'm in the process of cleaning it up and adding tests. Pull requests welcome.
+This is an early prototype for the PushVendor point of sale that we decided to open source. Our new commercial offering bears little resemblence to this early prototype. You're free to take this repo and use it as you will. We learned a lot from this experiment.
 
 
 ## Getting Started
@@ -51,15 +51,11 @@ Demo Available @ demo.pushvendor.com
 * Create a pull request with description from your branch into develop
 
 
-## Comments
-
-This project is based off of an early prototype that never went into production. It is not suitable for actual deployment in its current state.
-
 --------
 
 The MIT License (MIT)
 
-Copyright (c) 2014,2016 Hunt Burdick
+Copyright (c) 2014,2017 Hunt Burdick
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
