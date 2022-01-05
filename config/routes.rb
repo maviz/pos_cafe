@@ -57,7 +57,7 @@ PushvendorPos::Application.routes.draw do
     end
   end
 
-  devise_for :users
+  devise_for :users, controllers: {sessions: "sessions"}
   resources :users do
     collection do
       post 'new_user'

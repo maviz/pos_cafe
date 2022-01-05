@@ -10,11 +10,12 @@
         <th>Total Price</th>
       </tr>
     </thead>
-
     <tbody>
       <%= fields_for @sale do |f|%>
+        
         <%= f.fields_for :items do |e| %>
           <% @line_item = LineItem.where(:sale_id => @sale.id, :item_id => e.object.id).first %>
+
           <tr>
             <td><%= e.text_field :sku, :class => "form-control line_item_sku", :placeholder => "SKU", :readonly => true %></td>
             <td><%= e.text_field :name, :class => "form-control", :placeholder => "Item", :readonly => true %></td>
@@ -22,6 +23,7 @@
             <td>
               <input type="text" id="line_item_price" class='form-control price_control' value="<%= number_to_currency(@line_item.price, unit: config.currency) %>">
             </td>
+
             <td class="amount">
               <%= text_field(:line_item, :quantity, :class => 'form-control price_control', :readonly => 'readonly') %>
               <div class="adjust hidden-print">
@@ -37,6 +39,7 @@
             <td><input class="form-control" type="text" value="<%= number_to_currency(@line_item.total_price, unit: config.currency) %>" placeholder="Total Price" readonly="readonly"></td>
           </tr>
         <% end %>
+
       <% end %>
     </tbody>
   </table>

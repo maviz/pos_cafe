@@ -14,7 +14,8 @@
         <th>Balance</th>
         <th></th>
 	  	</tr>
-	  	<% for sale in @recent_sales %>
+	  	
+      <% for sale in @recent_sales %>
 	    	<tr class="<%= sale.remaining_balance == 0.00 && !sale.total_amount.blank? ? 'success' : '' %>">
 	    		<td><%= sale.id %></td>
           <td><%= sale.created_at.strftime("%m/%d/%y %I:%M:%S %p")  %></td>
@@ -52,5 +53,5 @@
   <div class="panel-heading">Summary</div>
 
   <!-- Table -->
-  <%= render :partial => 'template/sales_summary' %>
+  <%#= render :partial => 'template/sales_summary' %>
 </div>

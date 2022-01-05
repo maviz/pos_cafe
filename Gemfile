@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.0.rc1'
-gem 'pg'
+gem 'rails'
+gem 'mysql2'
+
+# gem 'rake', '< 11.0'
 
 # -----------------------------------------
 # Javascript Resources
@@ -21,7 +23,7 @@ gem 'jbuilder', '2.4.1'
 # -----------------------------------------
 # Authentication and Permissions
 # -----------------------------------------
-gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
+gem 'devise' #, :git => 'https://github.com/plataformatec/devise.git'
 gem 'cancancan', '1.13.1'
 
 
@@ -42,7 +44,7 @@ group :development, :test do
   gem 'byebug', '8.2.2'
   gem 'rspec-rails', '3.1.0'
   gem 'factory_girl_rails', '4.6.0'
-  gem 'faker', '1.6.3'
+  # gem 'faker', '1.6.3'
   gem 'database_cleaner', '1.5.1'
   gem 'letter_opener', '1.4.1'
   gem 'capybara', '2.6.2'
